@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+
+:root {
+  /* Font variables */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Montserrat", sans-serif;
+
+  /* Color variables */
+  --primary: #fe4775;
+  --secondary: #161060;
+  --text-primary: #393939;
+  --text-secondary: #111111;
+  --content-passive: #d4d4d4;
+}
 
 *,
 *::after,
