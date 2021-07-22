@@ -1,0 +1,14 @@
+.btn-action {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--clr-primary);
+  border: 1.5rem solid var(--clr-primary);
+  border-radius: 0.5rem 0 0 0;
+}
+
+.btn-action img {
+  height: 3rem;
+  width: 3rem;
+}
