@@ -2,49 +2,49 @@
   <!-- Input Description -->
 
   <fieldset>
-    <label for="input-description" class="label">Description</label>
+    <label for="description" class="frm-new-task__label">Description</label>
     <input
       type="input"
-      name="input-description"
-      class="input-description"
+      name="description"
+      class="frm-new-task__description"
       placeholder="Enter task"
     />
   </fieldset>
 
   <!-- Input Date -->
   <fieldset>
-    <legend class="label label-date">When</legend>
-    <div class="wrapper-date">
+    <legend class="frm-new-task__label label-date">When</legend>
+    <div class="frm-new-task__wrapper-date">
       <input
         type="radio"
-        name="radio-date"
-        class="radio-date"
-        id="radio-date-today"
+        name="date"
+        class="frm-new-task__date"
+        id="date-today"
         value="today"
         checked="true"
       />
-      <label for="radio-date-today">Today</label>
+      <label for="date-today">Today</label>
 
       <input
         type="radio"
-        name="radio-date"
-        class="radio-date"
-        id="radio-date-tomorrow"
-        value="today"
+        name="date"
+        class="frm-new-task__date"
+        id="date-tomorrow"
+        value="tomorrow"
       />
-      <label for="radio-date-tomorrow">Tomorrow</label>
+      <label for="date-tomorrow">Tomorrow</label>
 
       <input
         type="radio"
-        name="radio-date"
-        class="radio-date"
-        id="radio-date-specified"
-        value="today"
+        name="date"
+        class="frm-new-task__date"
+        id="date-specified"
+        value="specified"
       />
-      <label for="radio-date-specified">Select Date</label>
+      <label for="date-specified">Select Date</label>
     </div>
   </fieldset>
 
   <!-- Submit -->
-  <input type="submit" value="Add Task" class="input-submit" />
+  <input type="submit" value="Add Task" class="frm-new-task__submit" />
 </form>

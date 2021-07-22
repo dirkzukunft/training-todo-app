@@ -12,7 +12,7 @@
   border: none;
 }
 
-.frm-new-task .label {
+.frm-new-task__label {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: block;
@@ -21,46 +21,46 @@
 
 /* Input Description styles */
 
-.frm-new-task .input-description {
+.frm-new-task__description {
   font-size: 3rem;
   border: none;
   padding-bottom: 0.2em;
   border-bottom: 0.05em solid rgba(0, 0, 0, 0.38);
 }
 
-.frm-new-task .input-description::placeholder {
+.frm-new-task__description::placeholder {
   color: rgba(0, 0, 0, 0.21);
 }
 
-.frm-new-task .input-description:focus {
+.frm-new-task__description:focus {
   outline: none;
 }
 
 /* Radio Date styles */
 
-.frm-new-task .wrapper-date {
+.frm-new-task__wrapper-date {
   display: flex;
   justify-content: space-around;
   background-color: rgba(212, 212, 212, 0.3);
   padding: 1em 0;
 }
 
-.frm-new-task .radio-date + label {
+.frm-new-task__date + label {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.68);
 }
 
-.frm-new-task .radio-date:checked + label {
+.frm-new-task__date:checked + label {
   color: var(--clr-primary);
 }
 
-.frm-new-task .radio-date {
+.frm-new-task__date {
   display: none;
 }
 
 /* Submit button styles */
 
-.input-submit {
+.frm-new-task__submit {
   background-color: var(--clr-primary);
   color: #fff;
   border: none;
