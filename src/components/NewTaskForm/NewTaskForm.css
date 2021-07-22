@@ -3,13 +3,17 @@
 .frm-new-task {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 /* Fieldset and label styles */
 
 .frm-new-task fieldset {
   border: none;
+  margin-bottom: 3rem;
+}
+
+.frm-new-task fieldset:last-of-type {
+  flex-grow: 1;
 }
 
 .frm-new-task__label {
