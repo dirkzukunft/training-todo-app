@@ -1,1 +1,48 @@
-<form class="task"></form>
+<form class="frm-new-task">
+  <!-- Input Description -->
+
+  <fieldset>
+    <label for="input-description" class="label">Description</label>
+    <input
+      type="input"
+      name="input-description"
+      class="input-description"
+      placeholder="Enter task"
+    />
+  </fieldset>
+
+  <!-- Input Date -->
+  <fieldset>
+    <legend class="label">When</legend>
+
+    <input
+      type="radio"
+      name="radio-date"
+      class="radio-date"
+      id="radio-date-today"
+      value="today"
+    />
+    <label for="radio-date">Today</label>
+
+    <input
+      type="radio"
+      name="radio-date"
+      class="radio-date"
+      id="radio-date-tomorrow"
+      value="today"
+    />
+    <label for="radio-date">Tomorrow</label>
+
+    <input
+      type="radio"
+      name="radio-date"
+      class="radio-date"
+      id="radio-date-specified"
+      value="today"
+    />
+    <label for="radio-date">Select Date</label>
+  </fieldset>
+
+  <!-- Submit -->
+  <input type="submit" value="Add Task" class="input-submit" />
+</form>
