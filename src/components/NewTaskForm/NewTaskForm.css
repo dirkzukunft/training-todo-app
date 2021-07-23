@@ -13,7 +13,7 @@
   padding: 1rem 0 1rem 1rem;
 }
 
-.frm-new-task__section:last-of-type {
+.frm-new-task__section--grow {
   flex-grow: 1;
 }
 
