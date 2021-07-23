@@ -1,0 +1,50 @@
+<form class="frm-new-task">
+  <!-- Input Description -->
+
+  <div class="frm-new-task__section">
+    <label for="description" class="frm-new-task__label">Description</label>
+    <input
+      type="input"
+      name="description"
+      class="frm-new-task__description"
+      placeholder="Enter task"
+    />
+  </div>
+
+  <!-- Input Date -->
+  <fieldset class="frm-new-task__section frm-new-task__section--grow">
+    <legend class="frm-new-task__label label-date">When</legend>
+    <div class="frm-new-task__wrapper-date">
+      <input
+        type="radio"
+        name="date"
+        class="frm-new-task__date"
+        id="date-today"
+        value="today"
+        checked="true"
+      />
+      <label for="date-today">Today</label>
+
+      <input
+        type="radio"
+        name="date"
+        class="frm-new-task__date"
+        id="date-tomorrow"
+        value="tomorrow"
+      />
+      <label for="date-tomorrow">Tomorrow</label>
+
+      <input
+        type="radio"
+        name="date"
+        class="frm-new-task__date"
+        id="date-specified"
+        value="specified"
+      />
+      <label for="date-specified">Select Date</label>
+    </div>
+  </fieldset>
+
+  <!-- Submit -->
+  <input type="submit" value="Add Task" class="frm-new-task__submit" />
+</form>
