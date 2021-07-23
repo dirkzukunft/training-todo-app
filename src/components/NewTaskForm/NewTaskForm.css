@@ -7,13 +7,20 @@
 
 /* Fieldset and label styles */
 
-.frm-new-task fieldset {
+.frm-new-task__section {
   border: none;
   margin-bottom: 3rem;
+  padding: 1em;
 }
 
-.frm-new-task fieldset:last-of-type {
+.frm-new-task__section:last-of-type {
   flex-grow: 1;
+}
+
+.frm-new-task__section fieldset {
+  /* fix fieldset positioning */
+  padding: 1em 0 0 0;
+  margin-bottom: 0;
 }
 
 .frm-new-task__label {
@@ -30,6 +37,7 @@
   border: none;
   padding-bottom: 0.2em;
   border-bottom: 0.05em solid rgba(0, 0, 0, 0.38);
+  overflow: hidden;
 }
 
 .frm-new-task__description::placeholder {
@@ -46,10 +54,13 @@
   display: flex;
   justify-content: space-around;
   background-color: rgba(212, 212, 212, 0.3);
-  padding: 1em 0;
 }
 
 .frm-new-task__date + label {
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+
   cursor: pointer;
   color: rgba(0, 0, 0, 0.68);
 }
