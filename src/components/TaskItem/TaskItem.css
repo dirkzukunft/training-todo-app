@@ -1,0 +1,12 @@
+.task-item {
+  display: none;
+}
+
+.task-item ~ label {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.task-item:checked + label {
+  text-decoration: line-through;
+  text-decoration-color: var(--clr-primary);
+}
