@@ -12,6 +12,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--clr-content-passive);
+  font-weight: var(--fw-thin);
 }
 
 .filterNav__item--active {
