@@ -1,0 +1,19 @@
+.filterNav {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 1rem 1rem 1rem;
+  writing-mode: vertical-lr;
+}
+
+.filterNav__item {
+  transform: rotate(180deg);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--clr-content-passive);
+}
+
+.filterNav__item--active {
+  color: var(--clr-primary);
+}
