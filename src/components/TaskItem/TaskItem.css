@@ -3,6 +3,8 @@
 }
 
 .task-item ~ label {
+  display: block;
+  padding-bottom: 1em;
   font-size: 1.25rem;
   cursor: pointer;
 }
