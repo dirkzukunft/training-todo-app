@@ -27,8 +27,6 @@
 
 .wrapper-main__tasks {
   grid-area: 3 / 2 / 4 / 4;
-  overflow-y: scroll;
-  height: 100%;
-  width: 100%;
+  overflow-y: auto;
   padding-bottom: 3em;
 }
