@@ -18,17 +18,17 @@
 }
 
 .icon-button--menu::after {
-  background-image: url("assets/menu.svg");
+  background-image: url("../../assets/menu.svg");
 }
 
 .icon-button--notification::after {
-  background-image: url("assets/bell.svg");
+  background-image: url("../../assets/bell.svg");
 }
 
 .icon-button--back::after {
-  background-image: url("assets/back.svg");
+  background-image: url("../../assets/back.svg");
 }
 
 .icon-button--close::after {
-  background-image: url("assets/close.svg");
+  background-image: url("../../assets/close.svg");
 }
