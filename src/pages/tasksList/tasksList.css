@@ -29,4 +29,5 @@
   grid-area: 3 / 2 / 4 / 4;
   overflow-y: auto;
   padding-bottom: 3em;
+  background-color: var(--clr-content-passive);
 }
