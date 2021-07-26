@@ -1,14 +1,19 @@
 .btn-action {
-  display: flex;
   position: absolute;
+  cursor: pointer;
   right: 0;
   bottom: 0;
   background-color: var(--clr-primary);
-  border: 1.5rem solid var(--clr-primary);
+  border: 1rem solid var(--clr-primary);
   border-radius: 0.5rem 0 0 0;
 }
 
-.btn-action img {
+.btn-action::after {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
   height: 3rem;
   width: 3rem;
+  background-size: 3rem 3rem;
+  background-image: url("../../assets/plus.svg");
 }

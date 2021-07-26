@@ -1,17 +1,18 @@
 .filterNav {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 0 1rem 1rem 1rem;
-  writing-mode: vertical-lr;
 }
 
 .filterNav__item {
   transform: rotate(180deg);
+  writing-mode: vertical-lr;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--clr-content-passive);
+  letter-spacing: 0.1em;
+  color: var(--clr-text-passive);
+  font-weight: var(--fw-thin);
 }
 
 .filterNav__item--active {

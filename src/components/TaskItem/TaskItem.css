@@ -1,12 +1,18 @@
-.task-item {
-  display: none;
-}
-
-.task-item ~ label {
+.taskItem span {
+  display: block;
+  margin-bottom: 1em;
   font-size: 1.25rem;
   cursor: pointer;
 }
-.task-item:checked + label {
+
+.taskItem__checkbox {
+  display: block;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.taskItem__checkbox:checked + span {
   text-decoration: line-through;
   text-decoration-color: var(--clr-primary);
 }
