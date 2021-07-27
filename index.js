@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 document.querySelector(".actionButton").onclick = addTaskItem;
 
 function addTaskItem() {
@@ -20,4 +18,3 @@ function createNewTaskItem() {
 
   return newTaskItem;
 }
->>>>>>> dashboardjs

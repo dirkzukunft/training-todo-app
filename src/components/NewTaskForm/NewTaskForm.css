@@ -3,6 +3,7 @@
 .newTaskForm {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /* Fieldset and label styles */
