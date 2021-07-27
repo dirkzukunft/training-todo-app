@@ -3,7 +3,17 @@
 @import url(src/components/FilterNav/FilterNav.css);
 @import url(src/components/IconButton/IconButton.css);
 @import url(src/components/TaskItem/TaskItem.css);
+@import url(src/components/NewTaskForm/NewTaskForm.css);
 @import url(src/components/typography/typography.css);
+
+body {
+  height: 100vh;
+  display: grid;
+}
+
+.newTaskForm {
+  height: 100%;
+}
 
 .wrapperMainGrid {
   display: grid;
