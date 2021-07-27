@@ -15,6 +15,7 @@
   padding: 1rem;
   align-self: end;
 }
+
 .wrapperMainGrid {
   display: grid;
   grid: 5vh 25vh 1fr / [start] 2rem 1fr auto [end];
