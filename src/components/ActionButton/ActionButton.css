@@ -1,4 +1,4 @@
-.btn-action {
+.actionButton {
   position: absolute;
   cursor: pointer;
   right: 0;
@@ -8,7 +8,7 @@
   border-radius: 0.5rem 0 0 0;
 }
 
-.btn-action::after {
+.actionButton::after {
   content: "";
   display: block;
   background-repeat: no-repeat;
