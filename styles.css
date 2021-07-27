@@ -1,9 +1,9 @@
-@import url(global.css);
-@import url(components/ActionButton/ActionButton.css);
-@import url(components/FilterNav/FilterNav.css);
-@import url(components/IconButton/IconButton.css);
-@import url(components/TaskItem/TaskItem.css);
-@import url(components/typography/typography.css);
+@import url(src/global.css);
+@import url(src/components/ActionButton/ActionButton.css);
+@import url(src/components/FilterNav/FilterNav.css);
+@import url(src/components/IconButton/IconButton.css);
+@import url(src/components/TaskItem/TaskItem.css);
+@import url(src/components/typography/typography.css);
 
 .wrapperMainGrid {
   display: grid;
