@@ -1,0 +1,38 @@
+@import url(global.css);
+@import url(components/ActionButton/ActionButton.css);
+@import url(components/FilterNav/FilterNav.css);
+@import url(components/IconButton/IconButton.css);
+@import url(components/TaskItem/TaskItem.css);
+@import url(components/typography/typography.css);
+
+.wrapperMainGrid {
+  display: grid;
+  grid: auto 25vh 1fr / [start] 2rem 1fr auto [end];
+  padding: 1rem;
+  height: 100vh;
+}
+
+.wrapperMainGrid__menu {
+  grid-column: start / end;
+  place-self: center left;
+}
+
+.wrapperMainGrid__headline {
+  grid-column: span 2;
+  place-self: center left;
+}
+
+.wrapperMainGrid__notification {
+  place-self: center right;
+}
+
+.wrapperMainGrid__filter-nav {
+  justify-self: flex-start;
+}
+
+.wrapperMainGrid__tasks {
+  grid-column: span 2;
+  overflow-y: auto;
+  padding-bottom: 3em;
+  background-color: var(--clr-content-passive);
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapperMainGrid">
+      <div class="wrapperMainGrid__menu">
+        <button class="icon-button icon-button--menu">Open Menu</button>
+      </div>
+
+      <header class="wrapperMainGrid__headline">
+        <h1>Tasks</h1>
+      </header>
+
+      <div class="wrapperMainGrid__notification">
+        <button class="icon-button icon-button--notification">
+          Toggle Notification
+        </button>
+      </div>
+
+      <div class="wrapperMainGrid__filter-nav">
+        <nav class="filterNav">
+          <a href="#" class="filterNav__item filterNav__item--active">Today</a>
+          <a href="#" class="filterNav__item">Tomorrow</a>
+          <a href="#" class="filterNav__item">This week</a>
+        </nav>
+      </div>
+
+      <main class="wrapperMainGrid__tasks">
+        <label class="taskItem">
+          <input type="checkbox" class="taskItem__checkbox" checked="" />
+          <span>Lorem ipsum dolor sit amet consectet deserunt</span>
+        </label>
+        <label class="taskItem">
+          <input type="checkbox" class="taskItem__checkbox" />
+          <span>Sit maxime architecto deleniti commodi deserunt</span>
+        </label>
+        <label class="taskItem">
+          <input type="checkbox" class="taskItem__checkbox" />
+          <span>Perferendis quam consequatur</span>
+        </label>
+        <label class="taskItem">
+          <input type="checkbox" class="taskItem__checkbox" />
+          <span>Perferendis quam consequatur quidem doloremque architecto</span>
+        </label>
+        <label class="taskItem">
+          <input type="checkbox" class="taskItem__checkbox" />
+          <span>
+            Sapiente veritallendus harum dolore consectetur adipisicing elit
+            incidunt ipsam vero beatae consequuntur ipsum et mollitia quam
+            reprehenderit perferendis possimus
+          </span>
+        </label>
+      </main>
+
+      <div class="wrapperMainGrid__add-button-nav">
+        <button class="btn-action" aria-label="Add task"></button>
+      </div>
+    </div>
+  </body>
+</html>
