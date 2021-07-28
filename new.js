@@ -1,9 +1,18 @@
 document.querySelector(".newTaskForm__submit").onclick = (event) => {
   event.preventDefault();
 
-  const selectedDate = document.querySelector(".newTaskForm__date:checked")
-    .value;
-  const description = document.querySelector(".newTaskForm__description").value;
+  const newTask = {
+    description: "",
+    selectedDate: "",
+    isDone: false,
+  };
 
-  console.log(description, selectedDate);
+  newTask.selectedDate = document.querySelector(
+    ".newTaskForm__date:checked"
+  ).value;
+  newTask.description = document.querySelector(
+    ".newTaskForm__description"
+  ).value;
+
+  console.log(newTask);
 };
