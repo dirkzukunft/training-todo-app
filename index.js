@@ -1,10 +1,18 @@
-document.querySelector(".actionButton").onclick = addTaskItem;
+const sampleTask = {
+  description: "My sample task",
+  selectedDate: "today",
+  isDone: false,
+};
 
-function addTaskItem() {
-  document.querySelector(".wrapperMainGrid__tasks").append(createNewTaskItem());
+document.querySelector(".actionButton").onclick = () => addTaskItem(sampleTask);
+
+function addTaskItem(task) {
+  document
+    .querySelector(".wrapperMainGrid__tasks")
+    .append(createNewTaskItem(task));
 }
 
-function createNewTaskItem() {
+function createNewTaskItem(task) {
   const newTaskItem = document.createElement("label");
   const newTaskItemInput = document.createElement("input");
   const newTaskItemSpan = document.createElement("span");
@@ -12,7 +20,8 @@ function createNewTaskItem() {
   newTaskItem.className = "taskItem";
   newTaskItemInput.className = "taskItem__checkbox";
   newTaskItemInput.type = "checkbox";
-  newTaskItemSpan.innerText = "My new task";
+  newTaskItemInput.checked = task.isDone;
+  newTaskItemSpan.innerText = task.description;
 
   newTaskItem.append(newTaskItemInput, newTaskItemSpan);
 
