@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new task</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="newTaskGrid">
+    <header>
+      <h1>Add New Task</h1>
+    </header>
+    <form class="newTaskForm">
+      <div class="newTaskForm__section">
+        <label for="description" class="newTaskForm__label">Description</label>
+        <input
+          type="input"
+          name="description"
+          class="newTaskForm__description"
+          placeholder="Enter task"
+        />
+      </div>
+
+      <fieldset class="newTaskForm__section newTaskForm__section--grow">
+        <legend class="newTaskForm__label label-date">When</legend>
+        <div class="newTaskForm__wrapper-date">
+          <input
+            type="radio"
+            name="date"
+            class="newTaskForm__date"
+            id="date-today"
+            value="today"
+            checked="true"
+          />
+          <label for="date-today">Today</label>
+
+          <input
+            type="radio"
+            name="date"
+            class="newTaskForm__date"
+            id="date-tomorrow"
+            value="tomorrow"
+          />
+          <label for="date-tomorrow">Tomorrow</label>
+
+          <input
+            type="radio"
+            name="date"
+            class="newTaskForm__date"
+            id="date-specified"
+            value="specified"
+          />
+          <label for="date-specified">Select Date</label>
+        </div>
+      </fieldset>
+
+      <input type="submit" value="Add Task" class="newTaskForm__submit" />
+    </form>
+    <script src="new.js" defer></script>
+  </body>
+</html>

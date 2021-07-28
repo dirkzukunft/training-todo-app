@@ -1,24 +1,24 @@
-<form class="frm-new-task">
+<form class="newTaskForm">
   <!-- Input Description -->
 
-  <div class="frm-new-task__section">
-    <label for="description" class="frm-new-task__label">Description</label>
+  <div class="newTaskForm__section">
+    <label for="description" class="newTaskForm__label">Description</label>
     <input
       type="input"
       name="description"
-      class="frm-new-task__description"
+      class="newTaskForm__description"
       placeholder="Enter task"
     />
   </div>
 
   <!-- Input Date -->
-  <fieldset class="frm-new-task__section frm-new-task__section--grow">
-    <legend class="frm-new-task__label label-date">When</legend>
-    <div class="frm-new-task__wrapper-date">
+  <fieldset class="newTaskForm__section newTaskForm__section--grow">
+    <legend class="newTaskForm__label label-date">When</legend>
+    <div class="newTaskForm__wrapper-date">
       <input
         type="radio"
         name="date"
-        class="frm-new-task__date"
+        class="newTaskForm__date"
         id="date-today"
         value="today"
         checked="true"
@@ -28,7 +28,7 @@
       <input
         type="radio"
         name="date"
-        class="frm-new-task__date"
+        class="newTaskForm__date"
         id="date-tomorrow"
         value="tomorrow"
       />
@@ -37,7 +37,7 @@
       <input
         type="radio"
         name="date"
-        class="frm-new-task__date"
+        class="newTaskForm__date"
         id="date-specified"
         value="specified"
       />
@@ -46,5 +46,5 @@
   </fieldset>
 
   <!-- Submit -->
-  <input type="submit" value="Add Task" class="frm-new-task__submit" />
+  <input type="submit" value="Add Task" class="newTaskForm__submit" />
 </form>

@@ -1,29 +1,30 @@
 /* Form container */
 
-.frm-new-task {
+.newTaskForm {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /* Fieldset and label styles */
 
-.frm-new-task__section {
+.newTaskForm__section {
   border: none;
   margin-bottom: 3rem;
   padding: 1rem 0 1rem 1rem;
 }
 
-.frm-new-task__section--grow {
+.newTaskForm__section--grow {
   flex-grow: 1;
 }
 
-.frm-new-task__section fieldset {
+.newTaskForm__section fieldset {
   /* fix fieldset positioning */
   padding: 1rem 0 0 0;
   margin-bottom: 0;
 }
 
-.frm-new-task__label {
+.newTaskForm__label {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: block;
@@ -32,7 +33,7 @@
 
 /* Input Description styles */
 
-.frm-new-task__description {
+.newTaskForm__description {
   font-size: 3rem;
   border: none;
   width: 100%;
@@ -41,23 +42,23 @@
   border-bottom: 0.05em solid rgba(0, 0, 0, 0.38);
 }
 
-.frm-new-task__description::placeholder {
+.newTaskForm__description::placeholder {
   color: rgba(0, 0, 0, 0.21);
 }
 
-.frm-new-task__description:focus {
+.newTaskForm__description:focus {
   outline: none;
 }
 
 /* Radio Date styles */
 
-.frm-new-task__wrapper-date {
+.newTaskForm__wrapper-date {
   display: flex;
   justify-content: space-around;
   background-color: rgba(212, 212, 212, 0.3);
 }
 
-.frm-new-task__date + label {
+.newTaskForm__date + label {
   width: 100%;
   text-align: center;
   padding: 1em 0;
@@ -65,17 +66,17 @@
   color: rgba(0, 0, 0, 0.68);
 }
 
-.frm-new-task__date:checked + label {
+.newTaskForm__date:checked + label {
   color: var(--clr-primary);
 }
 
-.frm-new-task__date {
+.newTaskForm__date {
   display: none;
 }
 
 /* Submit button styles */
 
-.frm-new-task__submit {
+.newTaskForm__submit {
   background-color: var(--clr-primary);
   color: #fff;
   border: none;
