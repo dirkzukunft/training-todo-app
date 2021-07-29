@@ -1,8 +1,20 @@
-const sampleTask = {
-  description: "My sample task",
-  selectedDate: "today",
-  isDone: false,
-};
+const tasks = [
+  {
+    description: "My sample task",
+    selectedDate: "today",
+    isDone: false,
+  },
+  {
+    description: "My sample task",
+    selectedDate: "today",
+    isDone: false,
+  },
+  {
+    description: "My sample task",
+    selectedDate: "today",
+    isDone: false,
+  },
+];
 
 document.querySelector(".actionButton").onclick = () => addTaskItem(sampleTask);
 
