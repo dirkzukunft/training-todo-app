@@ -5,24 +5,22 @@ const tasks = [
     isDone: false,
   },
   {
-    description: "My sample task",
-    selectedDate: "today",
-    isDone: false,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, dicta.",
+    selectedDate: "tomorrow",
+    isDone: true,
   },
   {
-    description: "My sample task",
+    description: "My sample task 2",
     selectedDate: "today",
     isDone: false,
   },
 ];
 
-document.querySelector(".actionButton").onclick = () => addTaskItem(sampleTask);
+const taskItems = tasks.map((taskObject) => createNewTaskItem(taskObject));
 
-function addTaskItem(task) {
-  document
-    .querySelector(".wrapperMainGrid__tasks")
-    .append(createNewTaskItem(task));
-}
+const taskList = document.querySelector(".wrapperMainGrid__tasks");
+taskList.append(...taskItems);
 
 function createNewTaskItem(task) {
   const newTaskItem = document.createElement("label");
