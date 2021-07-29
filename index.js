@@ -1,16 +1,31 @@
-const sampleTask = {
-  description: "My sample task",
-  selectedDate: "today",
-  isDone: false,
-};
+import {
+  parseJSONFromLocalStorage,
+  stringifyJSONToLocalStorage,
+} from "./utils/localStorage.js";
 
-document.querySelector(".actionButton").onclick = () => addTaskItem(sampleTask);
+const tasks = [
+  {
+    description: "My sample task",
+    selectedDate: "today",
+    isDone: false,
+  },
+  {
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, dicta.",
+    selectedDate: "tomorrow",
+    isDone: true,
+  },
+  {
+    description: "My sample task 2",
+    selectedDate: "today",
+    isDone: false,
+  },
+];
 
-function addTaskItem(task) {
-  document
-    .querySelector(".wrapperMainGrid__tasks")
-    .append(createNewTaskItem(task));
-}
+const taskItems = tasks.map((taskObject) => createNewTaskItem(taskObject));
+
+const taskList = document.querySelector(".wrapperMainGrid__tasks");
+taskList.append(...taskItems);
 
 function createNewTaskItem(task) {
   const newTaskItem = document.createElement("label");
