@@ -1,3 +1,8 @@
+import {
+  parseJSONFromLocalStorage,
+  stringifyJSONToLocalStorage,
+} from "./utils/localStorage.js";
+
 const tasks = [
   {
     description: "My sample task",
