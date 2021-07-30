@@ -1,31 +1,12 @@
-import {
-  parseJSONFromLocalStorage,
-  stringifyJSONToLocalStorage,
-} from "./utils/localStorage.js";
+import { parseJSONFromLocalStorage } from "./utils/localStorage.js";
 
-const tasks = [
-  {
-    description: "My sample task",
-    selectedDate: "today",
-    isDone: false,
-  },
-  {
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, dicta.",
-    selectedDate: "tomorrow",
-    isDone: true,
-  },
-  {
-    description: "My sample task 2",
-    selectedDate: "today",
-    isDone: false,
-  },
-];
-
+const tasks = parseJSONFromLocalStorage("tasks", []);
 const taskItems = tasks.map((taskObject) => createNewTaskItem(taskObject));
-
 const taskList = document.querySelector(".wrapperMainGrid__tasks");
 taskList.append(...taskItems);
+
+const actionButton = document.querySelector(".actionButton");
+actionButton.onclick = () => (location.href = "new.html");
 
 function createNewTaskItem(task) {
   const newTaskItem = document.createElement("label");

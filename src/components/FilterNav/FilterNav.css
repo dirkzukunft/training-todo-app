@@ -1,20 +1,23 @@
-.filterNav {
+.filterDay {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-.filterNav__item {
+.filterDay__radio {
+  display: none;
+}
+
+.filterDay__label {
   transform: rotate(180deg);
   writing-mode: vertical-lr;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--clr-text-passive);
-  font-weight: var(--fw-thin);
 }
 
-.filterNav__item--active {
+.filterDay__radio:checked + span {
   color: var(--clr-primary);
 }
