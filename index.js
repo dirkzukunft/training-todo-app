@@ -2,9 +2,11 @@ import { parseJSONFromLocalStorage } from "./utils/localStorage.js";
 
 const tasks = parseJSONFromLocalStorage("tasks", []);
 const taskItems = tasks.map((taskObject) => createNewTaskItem(taskObject));
-
 const taskList = document.querySelector(".wrapperMainGrid__tasks");
 taskList.append(...taskItems);
+
+const actionButton = document.querySelector(".actionButton");
+actionButton.onclick = () => (location.href = "new.html");
 
 function createNewTaskItem(task) {
   const newTaskItem = document.createElement("label");

@@ -21,6 +21,7 @@ document.querySelector(".newTaskForm__submit").onclick = (event) => {
 
   const tasks = parseJSONFromLocalStorage("tasks", []);
   tasks.push(newTask);
-
   stringifyJSONToLocalStorage("tasks", tasks);
+
+  location.href = ".";
 };
