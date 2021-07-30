@@ -23,12 +23,37 @@
         </button>
       </div>
 
-      <div class="wrapperMainGrid__filter-nav">
-        <nav class="filterNav">
-          <a href="#" class="filterNav__item filterNav__item--active">Today</a>
-          <a href="#" class="filterNav__item">Tomorrow</a>
-          <a href="#" class="filterNav__item">This week</a>
-        </nav>
+      <div class="wrapperMainGrid__filterDay filterDay">
+        <label class="filterDay__label">
+          <input
+            type="radio"
+            name="date"
+            class="filterDay__radio"
+            value="today"
+            checked="true"
+          />
+          <span>Today</span>
+        </label>
+
+        <label class="filterDay__label">
+          <input
+            type="radio"
+            name="date"
+            class="filterDay__radio"
+            value="tomorrow"
+          />
+          <span>Tomorrow</span>
+        </label>
+
+        <label class="filterDay__label">
+          <input
+            type="radio"
+            name="date"
+            class="filterDay__radio"
+            value="thisweek"
+          />
+          <span>This Week</span>
+        </label>
       </div>
 
       <main class="wrapperMainGrid__tasks"></main>
