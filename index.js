@@ -7,7 +7,8 @@ taskList.append(...taskListElements);
 
 const filterRadios = document.querySelectorAll(".filterDay__radio");
 filterRadios.forEach((filterRadio) => {
-  filterRadio.onclick = () => updateTaskList(taskList, filterRadio.value);
+  filterRadio.onclick = () =>
+    updateTaskList(tasks, taskList, filterRadio.value);
 });
 
 const actionButton = document.querySelector(".actionButton");
@@ -15,9 +16,9 @@ actionButton.onclick = () => (location.href = "new.html");
 
 // ------------------------------------------------------------------
 
-function updateTaskList(taskListElement, filter) {
+function updateTaskList(tasks, taskListElement, filter) {
   clearTaskList(taskListElement);
-  const taskItems = filterTasks(filter);
+  const taskItems = filterTasks(tasks, filter);
   taskListElement.append(...taskItems);
 }
 
@@ -29,8 +30,7 @@ function clearTaskList(taskListElement) {
 
 // ------------------------------------------------------------------
 
-function filterTasks(filter) {
-  const tasks = parseJSONFromLocalStorage("tasks", []);
+function filterTasks(tasks, filter) {
   const filteredTasks = tasks.filter((task) => task.selectedDate === filter);
   const filteredTasksElements = filteredTasks.map((task) =>
     createNewTask(task)
