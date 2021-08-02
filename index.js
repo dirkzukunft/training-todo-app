@@ -1,31 +1,41 @@
 import { parseJSONFromLocalStorage } from "./utils/localStorage.js";
 
 const taskList = document.querySelector(".wrapperMainGrid__tasks");
+const tasks = parseJSONFromLocalStorage("tasks", []);
+const taskListElements = tasks.map((task) => createNewTask(task));
+taskList.append(...taskListElements);
 
-updateTaskList();
-handleClickOnFilter();
-handleClickOnActionButton();
+const filterRadios = document.querySelectorAll(".filterDay__radio");
+filterRadios.forEach((filterRadio) => {
+  filterRadio.onclick = () => updateTaskList(taskList, filterRadio.value);
+});
+
+const actionButton = document.querySelector(".actionButton");
+actionButton.onclick = () => (location.href = "new.html");
 
 // ------------------------------------------------------------------
 
-function updateTaskList(filter) {
-  clearTaskList();
-  const taskItems = loadTasks(filter);
-  taskList.append(...taskItems);
+function updateTaskList(taskListElement, filter) {
+  clearTaskList(taskListElement);
+  const taskItems = filterTasks(filter);
+  taskListElement.append(...taskItems);
 }
 
 // ------------------------------------------------------------------
 
-function clearTaskList() {
-  taskList.innerHTML = "";
+function clearTaskList(taskListElement) {
+  taskListElement.innerHTML = "";
 }
 
 // ------------------------------------------------------------------
 
-function loadTasks(filter) {
-  let tasks = parseJSONFromLocalStorage("tasks", []);
-  if (filter) tasks = tasks.filter((task) => task.selectedDate === filter);
-  return tasks.map((task) => createNewTask(task));
+function filterTasks(filter) {
+  const tasks = parseJSONFromLocalStorage("tasks", []);
+  const filteredTasks = tasks.filter((task) => task.selectedDate === filter);
+  const filteredTasksElements = filteredTasks.map((task) =>
+    createNewTask(task)
+  );
+  return filteredTasksElements;
 }
 
 // ------------------------------------------------------------------
@@ -44,20 +54,4 @@ function createNewTask(task) {
   newTaskItem.append(newTaskItemInput, newTaskItemSpan);
 
   return newTaskItem;
-}
-
-// ------------------------------------------------------------------
-
-function handleClickOnFilter() {
-  const filterRadios = document.querySelectorAll(".filterDay__radio");
-  filterRadios.forEach((filterRadio) => {
-    filterRadio.onclick = () => updateTaskList(filterRadio.value);
-  });
-}
-
-// ------------------------------------------------------------------
-
-function handleClickOnActionButton() {
-  const actionButton = document.querySelector(".actionButton");
-  actionButton.onclick = () => (location.href = "new.html");
 }
