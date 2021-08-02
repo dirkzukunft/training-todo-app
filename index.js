@@ -1,9 +1,12 @@
 import { parseJSONFromLocalStorage } from "./utils/localStorage.js";
+
 const taskList = document.querySelector(".wrapperMainGrid__tasks");
 
 updateTaskList();
 handleClickOnFilter();
 handleClickOnActionButton();
+
+// ------------------------------------------------------------------
 
 function updateTaskList(filter) {
   clearTaskList();
@@ -11,15 +14,21 @@ function updateTaskList(filter) {
   taskList.append(...taskItems);
 }
 
+// ------------------------------------------------------------------
+
 function clearTaskList() {
   taskList.innerHTML = "";
 }
 
+// ------------------------------------------------------------------
+
 function loadTasks(filter) {
   let tasks = parseJSONFromLocalStorage("tasks", []);
   if (filter) tasks = tasks.filter((task) => task.selectedDate === filter);
-  return tasks.map((taskObject) => createNewTask(taskObject));
+  return tasks.map((task) => createNewTask(task));
 }
+
+// ------------------------------------------------------------------
 
 function createNewTask(task) {
   const newTaskItem = document.createElement("label");
@@ -37,12 +46,16 @@ function createNewTask(task) {
   return newTaskItem;
 }
 
+// ------------------------------------------------------------------
+
 function handleClickOnFilter() {
   const filterRadios = document.querySelectorAll(".filterDay__radio");
   filterRadios.forEach((filterRadio) => {
     filterRadio.onclick = () => updateTaskList(filterRadio.value);
   });
 }
+
+// ------------------------------------------------------------------
 
 function handleClickOnActionButton() {
   const actionButton = document.querySelector(".actionButton");
