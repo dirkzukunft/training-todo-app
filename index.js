@@ -1,14 +1,46 @@
 import { parseJSONFromLocalStorage } from "./utils/localStorage.js";
 
-const tasks = parseJSONFromLocalStorage("tasks", []);
-const taskItems = tasks.map((taskObject) => createNewTaskItem(taskObject));
 const taskList = document.querySelector(".wrapperMainGrid__tasks");
-taskList.append(...taskItems);
+const tasks = parseJSONFromLocalStorage("tasks", []);
+const taskListElements = tasks.map((task) => createNewTask(task));
+taskList.append(...taskListElements);
+
+const filterRadios = document.querySelectorAll(".filterDay__radio");
+filterRadios.forEach((filterRadio) => {
+  filterRadio.onclick = () =>
+    updateTaskList(tasks, taskList, filterRadio.value);
+});
 
 const actionButton = document.querySelector(".actionButton");
 actionButton.onclick = () => (location.href = "new.html");
 
-function createNewTaskItem(task) {
+// ------------------------------------------------------------------
+
+function updateTaskList(tasks, taskListElement, filter) {
+  clearTaskList(taskListElement);
+  const taskItems = filterTasks(tasks, filter);
+  taskListElement.append(...taskItems);
+}
+
+// ------------------------------------------------------------------
+
+function clearTaskList(taskListElement) {
+  taskListElement.innerHTML = "";
+}
+
+// ------------------------------------------------------------------
+
+function filterTasks(tasks, filter) {
+  const filteredTasks = tasks.filter((task) => task.selectedDate === filter);
+  const filteredTasksElements = filteredTasks.map((task) =>
+    createNewTask(task)
+  );
+  return filteredTasksElements;
+}
+
+// ------------------------------------------------------------------
+
+function createNewTask(task) {
   const newTaskItem = document.createElement("label");
   const newTaskItemInput = document.createElement("input");
   const newTaskItemSpan = document.createElement("span");
